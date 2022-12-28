@@ -1,5 +1,5 @@
 # registro_users
-api rest full express + mongoDB <br>
+api rest ful express + mongoDB <br>
 / >ruta principal <br>
 /user/create > crear registro <br>
 /user > todos los registros <br>
