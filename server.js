@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 
 
 const userRoute = require("./routes/user");
+const tasksRoute = require("./routes/tasks");
+const rolesRoute = require("./routes/roles");
 const log = require("./middlewares/log");
 const authentication = require("./middlewares/authentication");
 
@@ -16,6 +18,8 @@ app.get("/",(req, res) => {
 	res.send("Bienvenido, Registrate!!");
 })
 app.use("/user", authentication, userRoute);
+app.use("/roles", authentication, rolesRoute);
+app.use("/tasks", authentication, tasksRoute);
 
 mongoose.connect('mongodb://127.0.0.1:27017/registros', (error) => {
 	if (error) {
